@@ -106,6 +106,9 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT Message, WPARAM wParam, LPARAM lParam) 
 			
 			TextOut(hdc, 125, 17, cTimeString, strlen(cTimeString));
 			
+			DeleteObject(hFont);
+			EndPaint(hwnd, &ps);
+
 	        break;
 	    }
 		
